@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <a href="/login">Log in</a>
+        <a href="/change_password">Change Password</a>
+    </nav>
+    <h1>Welcome to Register</h1>
+
+    <% if (errors) { %>
+        <% errors.forEach(element => { %>
+            <p>
+                <%= element %> 
+            </p>
+        <% }) %>
+    <% } %>
+
+    <form action="/register" method="post">
+        <fieldset>
+            <label for="username">Username</label> <br>
+            <input type="text" name="username" id="username" placeholder="username"> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" id="password" placeholder="password"> <br>
+            <label for="confirm_password">Confirm password</label> <br>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password"> <br>
+            <button type="submit">Register</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
